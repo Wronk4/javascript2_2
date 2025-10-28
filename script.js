@@ -6,7 +6,7 @@
   const answer = document.getElementById('answer')
 
   example.addEventListener("click", function () {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://raw.githubusercontent.com/Wronk4/javascript2_2/refs/heads/main/db.json')
       .then(response => response.json())
       .then(array => {
         console.log(array)
