@@ -40,8 +40,21 @@ cw1.addEventListener("click", function () {
       });
 })
 
-  cw2.addEventListener("click", function () {
-    //TODO
+ cw2.addEventListener("click", function () {
+    const postSelect = document.getElementById('postSelect');
+    const postId = postSelect.value;
+    
+    answer.innerHTML = 'Loading…';
+    
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+      .then(response => response.json())
+      .then(post => {
+        console.log(post)
+      })
+      .catch(error => {
+        answer.innerHTML = `<p style="color: red;">Błąd: ${error.message}</p>`;
+      });
+      answer.innerHTML = 'Sent to console!';
   })
 
   cw3.addEventListener("click", function () {
