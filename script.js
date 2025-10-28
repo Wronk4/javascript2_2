@@ -14,9 +14,31 @@
       })
   })
 
-  cw1.addEventListener("click", function () {
-    //TODO
-  })
+cw1.addEventListener("click", function () {
+    answer.innerHTML = 'Loading…';
+    
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(posts => {
+        return new Promise(resolve => {
+          setTimeout(() => resolve(posts), 1000);
+        });
+      })
+      .then(posts => {
+      let html = '<table>'; 
+        posts.forEach(post => {
+          html += `<tr>
+            <td>${post.id}</td>
+            <td class="post-title" style="font-size: 16px;">${post.title}</td>
+            <td>${post.body}</td>
+          </tr>`;
+
+        });
+        html += '</table>'; 
+        answer.innerHTML = html;
+        answer.innerHTML = html;
+      });
+})
 
   cw2.addEventListener("click", function () {
     //TODO

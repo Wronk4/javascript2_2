@@ -1,4 +1,65 @@
-html {
-  height: 100%;
-  width: 100%;
-}
+body {
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+      
+      #answer {
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+      }
+      
+      .post-title {
+        color: red;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+      
+      th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: justify;
+      }
+      
+      th {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: bold;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
+      tr:hover {
+        background-color: #ddd;
+      }
+      
+      button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      
+      button:hover {
+        background-color: #45a049;
+      }
